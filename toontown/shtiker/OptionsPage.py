@@ -1100,7 +1100,6 @@ class CodesTabPage(DirectFrame):
         self.submitButton['state'] = DGG.NORMAL
 
 class ExtraOptionsTabPage(DirectFrame):
-    # TODO add scrollbar frame so we can add unlimited number of options
     notify = directNotify.newCategory('ExtraOptionsTabPage')
 
     def __init__(self, parent=aspect2d):
@@ -1124,7 +1123,7 @@ class ExtraOptionsTabPage(DirectFrame):
          leftMargin = -0.72
          buttonbase_xcoord = 0.35
          buttonbase_ycoord = 0.45
-         button_image_scale = (0.7, 1, 1)
+         button_image_scale = (1.0)
          button_textpos = (0, -0.02)
          options_text_scale = 0.052
          disabled_arrow_color = Vec4(0.6, 0.6, 0.6, 1.0)
@@ -1138,7 +1137,7 @@ class ExtraOptionsTabPage(DirectFrame):
                                                    guiButton.find('**/QuitBtn_DN'), guiButton.find('**/QuitBtn_RLVR')),
                                                    image_scale=button_image_scale,
                                                    text='Custom Controls',
-                                                   text_scale=options_text_scale,
+                                                   text_scale=(0.045),
                                                    text_pos=button_textpos,
                                                    pos=(
                                                        buttonbase_xcoord, 0.0, buttonbase_ycoord),

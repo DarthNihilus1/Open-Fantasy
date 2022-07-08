@@ -1100,6 +1100,7 @@ class CodesTabPage(DirectFrame):
         self.submitButton['state'] = DGG.NORMAL
 
 class ExtraOptionsTabPage(DirectFrame):
+    # TODO add scrollbar frame so we can add unlimited number of options
     notify = directNotify.newCategory('ExtraOptionsTabPage')
 
     def __init__(self, parent=aspect2d):

@@ -26,3 +26,4 @@ Housekeeper/
 sign/
 sign/texture.jpg
 *.lnk
+build/

@@ -105,22 +105,22 @@ GlobalStreetNames = {20000: ('to', 'on', 'Tutorial Terrace'),
                      9000: ('to the', 'in the', 'Playground'),
                      9100: ('to', 'on', 'Lullaby Lane'),
                      9200: ('to', 'on', 'Pajama Place'),
-                     10000: ('to', 'in', 'Bossbot Headquarters Country Club'),
-                     10100: ('to the', 'in the', 'Bossbot Headquarters Lobby'),
+                     10000: ('to', 'in', 'Bossbot Country Club'),
+                     10100: ('to the', 'in the', 'Bossbot Lobby'),
                      10200: ('to the', 'in the', 'The Clubhouse'),
                      10500: ('to the', 'in the', 'The Front Three'),
                      10600: ('to the', 'in the', 'The Middle Six'),
                      10700: ('to the', 'in the', 'The Back Nine'),
-                     11000: ('to the', 'in the', 'Sellbot Headquarters Courtyard'),
-                     11100: ('to the', 'in the', 'Sellbot Headquarters Lobby'),
+                     11000: ('to the', 'in the', 'Sellbot Courtyard'),
+                     11100: ('to the', 'in the', 'Sellbot Lobby'),
                      11200: ('to the', 'in the', 'Sellbot Factory'),
                      11500: ('to the', 'in the', 'Sellbot Factory'),
                      12000: ('to', 'in', 'Cashbot Train Yard'),
-                     12100: ('to the', 'in the', 'Cashbot Headquarters Lobby'),
+                     12100: ('to the', 'in the', 'Cashbot Lobby'),
                      12500: ('to the', 'in the', 'Cashbot Coin Mint'),
                      12600: ('to the', 'in the', 'Cashbot Dollar Mint'),
                      12700: ('to the', 'in the', 'Cashbot Bullion Mint'),
-                     13000: ('to', 'in', 'Lawbot Headquarters Courtyard'),
+                     13000: ('to', 'in', 'Lawbot Courtyard'),
                      13100: ('to the', 'in the', 'Courthouse Lobby'),
                      13200: ('to the', 'in the', "DA's Office Lobby"),
                      13300: ('to the', 'in the', 'Lawbot A Office'),
@@ -192,6 +192,12 @@ ASupervisor = 'a Mint Supervisor'
 CogCFO = Cog + ' C.F.O.'
 CogCFOs = "Cog C.F.O.'s"
 ACogCFO = ACog + ' C.F.O.'
+Clerk = 'Law Clerk'
+ClerkP = 'Law Clerks'
+AClerk = 'a Law Clerk'
+President = 'Club President'
+PresidentP = 'Club Presidents'
+APresident = 'a Club President'
 TheFish = 'the Fish'
 AFish = 'a fish'
 Level = 'Level'
@@ -1980,12 +1986,12 @@ ReportPanelCategoryHacking = 'Hacking'
 ReportPanelConfirmations = ('You are about to report that %s has used obscene, bigoted or sexually explicit language.',
                             'You are about to report that %s is being unsafe by giving out or requesting a phone number, address, last name, email address, password or account name.',
                             'You are about to report that %s is bullying, harassing, or using extreme behavior to disrupt the game.',
-                            "You are about to report that %s has created a name that does not follow Disney's House Rules.",
+                            "You are about to report that %s has created a name that does not follow PLAYER ZER0 STUDIOS's Guidelines.",
                             'You are about to report that %s has hacked/tampered with the game or used third party software.')
 ReportPanelWarning = "We take reporting very seriously. Your report will be viewed by a Moderator who will take appropriate action for anyone breaking our rules. If your account is found to have participated in breaking the rules, or if you make false reports or abuse the 'Report a Player' system, a Moderator may take action against your account. Are you absolutely sure you want to report this player?"
 ReportPanelThanks = 'Thank you! Your report has been sent to a Moderator for review. There is no need to contact us again about the issue. The moderation team will take appropriate action for a player found breaking our rules.'
 ReportPanelRemovedFriend = 'We have automatically removed %s from your Toon Friends List.'
-ReportPanelRemovedPlayerFriend = 'We have automatically removed %s as a Player friend so as such you will not see them as your friend in any Disney product.'
+ReportPanelRemovedPlayerFriend = "We have automatically removed %s as a Player friend so as such you will not see them as your friend in any PLAYER ZER0 STUDIOS' Products going forward."
 ReportPanelAlreadyReported = 'You have already reported %s during this session. A Moderator will review your previous report.'
 IgnorePanelTitle = 'Ignore A Player'
 IgnorePanelAddIgnore = 'Would you like to ignore %s for the rest of this session?'
@@ -2059,12 +2065,12 @@ FactoryBossTaunt = "I'm the Foreman."
 FactoryBossBattleTaunt = 'Let me introduce you to the Foreman.'
 MintBossTaunt = "I'm the Supervisor."
 MintBossBattleTaunt = 'You need to talk to the Supervisor.'
-StageBossTaunt = "My Justice isn't Blind"
-StageBossBattleTaunt = 'I am above the Law'
+StageBossTaunt = "My Justice isn't Blind."
+StageBossBattleTaunt = 'I am above the Law.'
 CountryClubBossTaunt = "I'm the Club President."
 CountryClubBossBattleTaunt = 'You need to talk to the Club President.'
 ForcedLeaveCountryClubAckMsg = 'The Club President was defeated before you could reach him. You did not recover any Stock Options.'
-ToonHealJokes = [['What goes TICK-TICK-TICK-WOOF?', 'A watchdog! '],
+ToonHealJokes = [['What goes TICK-TICK-TICK-WOOF?', 'A watchdog!'],
                  ['Why do male deer need braces?',
                      "Because they have 'buck teeth'!"],
                  ['Why is it hard for a ghost to tell a lie?',
@@ -2364,7 +2370,7 @@ MovieNPCSOSThrow = 'Throw'
 MovieNPCSOSSquirt = 'Squirt'
 MovieNPCSOSDrop = 'Drop'
 MovieNPCSOSAll = 'All'
-MoviePetSOSTrickFail = 'Sigh'
+MoviePetSOSTrickFail = 'Sigh...'
 MoviePetSOSTrickSucceedBoy = 'Good boy!'
 MoviePetSOSTrickSucceedGirl = 'Good girl!'
 MovieSuitCancelled = 'CANCELLED\nCANCELLED\nCANCELLED'
@@ -2422,7 +2428,7 @@ SuitNameDropper = 'Name Dropper'
 SuitGladHander = 'Glad Hander'
 SuitMoverShaker = 'Mover & Shaker'
 SuitTwoFace = 'Two-Face'
-SuitTheMingler = 'The Mingler'
+SuitTheMingler = 'Mingler'
 SuitMrHollywood = 'Mr. Hollywood'
 SuitShortChange = 'Short Change'
 SuitPennyPincher = 'Penny Pincher'
@@ -2447,14 +2453,14 @@ SuitMicromanagerS = 'a Micromanager'
 SuitDownsizerS = 'a Downsizer'
 SuitHeadHunterS = 'a Head Hunter'
 SuitCorporateRaiderS = 'a Corporate Raider'
-SuitTheBigCheeseS = 'a The Big Cheese'
+SuitTheBigCheeseS = 'a Big Cheese'
 SuitColdCallerS = 'a Cold Caller'
 SuitTelemarketerS = 'a Telemarketer'
 SuitNameDropperS = 'a Name Dropper'
 SuitGladHanderS = 'a Glad Hander'
 SuitMoverShakerS = 'a Mover & Shaker'
 SuitTwoFaceS = 'a Two-Face'
-SuitTheMinglerS = 'a The Mingler'
+SuitTheMinglerS = 'a Mingler'
 SuitMrHollywoodS = 'a Mr. Hollywood'
 SuitShortChangeS = 'a Short Change'
 SuitPennyPincherS = 'a Penny Pincher'
@@ -2479,14 +2485,14 @@ SuitMicromanagerP = 'Micromanagers'
 SuitDownsizerP = 'Downsizers'
 SuitHeadHunterP = 'Head Hunters'
 SuitCorporateRaiderP = 'Corporate Raiders'
-SuitTheBigCheeseP = 'The Big Cheeses'
+SuitTheBigCheeseP = 'Big Cheeses'
 SuitColdCallerP = 'Cold Callers'
 SuitTelemarketerP = 'Telemarketers'
 SuitNameDropperP = 'Name Droppers'
 SuitGladHanderP = 'Glad Handers'
 SuitMoverShakerP = 'Movers & Shakers'
 SuitTwoFaceP = 'Two-Faces'
-SuitTheMinglerP = 'The Minglers'
+SuitTheMinglerP = 'Minglers'
 SuitMrHollywoodP = 'Mr. Hollywoods'
 SuitShortChangeP = 'Short Changes'
 SuitPennyPincherP = 'Penny Pinchers'
@@ -2575,6 +2581,7 @@ SuitAttackNames = {'Audit': 'Audit!',
                    'TeeOff': 'Tee Off!',
                    'ThrowBook': 'Throw Book!',
                    'Tremor': 'Tremor!',
+                   'Trip': 'Trip!',
                    'UndergroundLiquidity': 'Underground Liquidity!',
                    'Watercooler': 'Watercooler!',
                    'Withdrawal': 'Withdrawal!',
@@ -2770,6 +2777,11 @@ SuitAttackTaunts = {'Audit': ["I believe your books don't balance.",
                               "I just sparkle, don't I?",
                               'Oh look, a crispy critter.',
                               "You shouldn't run around half baked."],
+                    'FiveOClockShadow': ['Let me throw some shade on you real quick.',
+                                         "Without a shadow of doubt, it's going to hurt.",
+                                         'Your misdeeds overshadow everything about you.',
+                                         "Tick-\x04tock, your time's running out.",
+                                         "There's reason to fear your own shadow."],
                     'FloodTheMarket': ['Cha-\x04ching!',
                                        'Cash, cash, and more cash!',
                                        'Time for some big bucks!',
@@ -4189,7 +4201,7 @@ FriendInviterPlayer = 'Player'
 FriendInviterThatPlayer = 'That player'
 FriendInviterBegin = 'What type of friend would you like to make?'
 FriendInviterToonFriendInfo = 'A friend only in Toontown'
-FriendInviterPlayerFriendInfo = 'A friend across the Disney.com network'
+FriendInviterPlayerFriendInfo = "A friend across the PLAYER ZER0 STUDIOS' network!"
 FriendInviterToonTooMany = 'You have too many toon friends to add another one now. You will have to remove some toon friends if you want to make friends with %s. You could also try making player friends them.'
 FriendInviterPlayerTooMany = 'You have too many player friends to add another one now. You will have to remove some player friends if you want to make friends with %s. You could also try making toon friends with them.'
 FriendInviterToonAlready = '%s is already your toon friend.'
@@ -4478,17 +4490,17 @@ MusicMMatchBg2 = 'Jazzy Minnie'
 MusicMgTarget = "Soarin' Over Toontown"
 MusicFfSafezone = 'The Funny Farm'
 MusicDdSz = 'Waddling Way'
-MusicMmNbrhood = "Minnie's Melodyland"
+MusicMmNbrhood = "The Land of Music"
 MusicGzPlaygolf = "Let's Play Golf!"
-MusicGsSz = 'Goofy Speedway'
-MusicOzSz = "Chip n' Dale's Acres"
+MusicGsSz = 'Racing Attitude'
+MusicOzSz = "Acres of Fun!"
 MusicGsRaceCc = 'Downtown Driving'
 MusicGsRaceSs = 'Ready, Set, Go!'
 MusicGsRaceRr = 'Route 66'
 MusicGzSz = 'The Putt-Putt Polka'
 MusicMmSz = 'Dancing in the Streets'
 MusicMmSzActivity = 'Here Comes Treble'
-MusicDdNbrhood = "Donald's Dock"
+MusicDdNbrhood = "Toontown Docks"
 MusicGsKartshop = 'Mr. Goofywrench'
 MusicDdSzActivity = 'Sea Shanty'
 MusicEncntrGeneralBgIndoor = 'Building Excitement'
@@ -4496,13 +4508,13 @@ MusicTtElevator = 'Going Up?'
 MusicEncntrToonWinningIndoor = 'Toons Unite!'
 MusicEncntrGeneralSuitWinningIndoor = 'Cog-tastrophe!'
 MusicTbNbrhood = 'The Brrrgh'
-MusicDlNbrhood = "Donald's Dreamland"
+MusicDlNbrhood = "Drowsy Dreamland"
 MusicDlSzActivity = 'Counting Sheep'
 MusicDgSz = 'Waltz of the Flowers'
 MusicDlSz = 'Sleepwalking'
 MusicTbSzActivity = 'Snow Problem'
 MusicTbSz = 'Shiver and Shimmy'
-MusicDgNbrhood = "Daisy's Garden"
+MusicDgNbrhood = "Flowering Grove"
 MusicEncntrHallOfFame = 'The Hall of Fame'
 MusicEncntrSuitHqNbrhood = 'Dollars and Cents'
 MusicChqFactBg = 'Cog Factory'

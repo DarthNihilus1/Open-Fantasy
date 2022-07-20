@@ -13,19 +13,17 @@ bSize = 5.29
 cSize = 4.14
 SuitDialogArray = []
 SkelSuitDialogArray = []
-AllSuits = (('walk', 'walk'), ('run', 'walk'), ('neutral', 'neutral'))
+AllSuits = (('walk', 'walk'),
+            ('run', 'walk'),
+            ('neutral', 'neutral'))
 AllSuitsMinigame = (('victory', 'victory'),
                     ('flail', 'flailing'),
                     ('tug-o-war', 'tug-o-war'),
                     ('slip-backward', 'slip-backward'),
                     ('slip-forward', 'slip-forward'))
-AllSuitsTutorialBattle = (
-    ('lose',
-     'lose'),
-    ('pie-small-react',
-     'pie-small'),
-    ('squirt-small-react',
-     'squirt-small'))
+AllSuitsTutorialBattle = (('lose', 'lose'),
+                          ('pie-small-react', 'pie-small'),
+                          ('squirt-small-react', 'squirt-small'))
 AllSuitsBattle = (('drop-react', 'anvil-drop'),
                   ('flatten', 'drop'),
                   ('sidestep-left', 'sidestep-left'),
@@ -36,7 +34,10 @@ AllSuitsBattle = (('drop-react', 'anvil-drop'),
                   ('rake-react', 'rake'),
                   ('hypnotized', 'hypnotize'),
                   ('soak', 'soak'),
+                  ('pen-squirt', 'fountain-pen'),
+                  ('finger-wag', 'finger-wag'),
                   ('magic1', 'magic1'),
+                  ('effort', 'effort'),
                   ('speak', 'speak'),
                   ('magic2', 'magic2'),
                   ('pickpocket', 'pickpocket'))
@@ -52,78 +53,92 @@ SuitsCEOBattle = (('sit', 'sit'),
                   ('tray-neutral', 'tray-neutral'),
                   ('sit-lose', 'sit-lose'))
 f = (('throw-paper', 'throw-paper', 3.5),
-     ('phone', 'phone', 3.5), ('shredder', 'shredder', 3.5))
+     ('phone', 'phone', 3.5),
+     ('shredder', 'shredder', 3.5))
 p = (('pencil-sharpener', 'pencil-sharpener', 5),
-     ('pen-squirt', 'pen-squirt', 5),
      ('hold-eraser', 'hold-eraser', 5),
-     ('finger-wag', 'finger-wag', 5),
      ('hold-pencil', 'hold-pencil', 5))
 ym = (('golf-club-swing', 'golf-club-swing', 5),
       ('magic3', 'magic3', 5),
       ('rubber-stamp', 'rubber-stamp', 5),
       ('smile', 'smile', 5))
-mm = (('effort', 'effort', 5), ('pen-squirt', 'fountain-pen', 5),
-      ('finger-wag', 'finger-wag', 5))
+mm = ()
 ds = (('throw-paper', 'throw-paper', 5),)
-hh = (('pen-squirt', 'fountain-pen', 7),
-      ('glower', 'glower', 5),
+hh = (('glower', 'glower', 5),
       ('throw-paper', 'throw-paper', 5),
       ('roll-o-dex', 'roll-o-dex', 5))
-cr = (('throw-paper', 'throw-paper', 3.5), ('glower', 'glower', 5))
-tbc = (('cigar-smoke', 'cigar-smoke', 8), ('glower', 'glower', 5),
+cr = (('throw-paper', 'throw-paper', 3.5),
+      ('glower', 'glower', 5))
+tbc = (('cigar-smoke', 'cigar-smoke', 5),
+       ('glower', 'glower', 5),
        ('golf-club-swing', 'golf-club-swing', 5))
-cc = (('glower', 'glower', 5), ('phone', 'phone', 3.5),
+cp = (('golf-club-swing', 'golf-club-swing', 5),)
+cc = (('glower', 'glower', 5),
+      ('phone', 'phone', 3.5),
       ('watercooler', 'watercooler', 5))
-tm = (('roll-o-dex', 'roll-o-dex', 5), ('phone', 'phone', 5))
+tm = (('roll-o-dex', 'roll-o-dex', 5),
+      ('phone', 'phone', 5))
 nd = (('roll-o-dex', 'roll-o-dex', 5),
       ('magic3', 'magic3', 5),
       ('smile', 'smile', 5),
       ('phone', 'phone', 5))
-gh = (('pen-squirt', 'fountain-pen', 5), ('rubber-stamp', 'rubber-stamp', 5))
-ms = (('effort', 'effort', 5), ('stomp', 'stomp', 5), ('quick-jump', 'jump', 6))
+gh = (('rubber-stamp', 'rubber-stamp', 5),)
+ms = (('stomp', 'stomp', 5),
+      ('quick-jump', 'jump', 5))
 tf = (('phone', 'phone', 5),
       ('throw-paper', 'throw-paper', 5),
       ('throw-object', 'throw-object', 5),
       ('glower', 'glower', 5))
-m = (('smile', 'smile', 5), ('golf-club-swing', 'golf-club-swing', 5))
+m = (('smile', 'smile', 5),
+     ('golf-club-swing', 'golf-club-swing', 5))
 mh = (('smile', 'smile', 5),
       ('golf-club-swing', 'golf-club-swing', 5),
-      ('song-and-dance', 'song-and-dance', 8))
-sc = (('throw-paper', 'throw-paper', 3.5), ('glower', 'glower', 5))
-pp = (('throw-paper', 'throw-paper', 5), ('glower',
-      'glower', 5), ('finger-wag', 'fingerwag', 5))
+      ('song-and-dance', 'song-and-dance', 5))
+ff = (('throw-paper', 'throw-paper', 5),
+      ('cigar-smoke', 'cigar-smoke', 5),
+      ('magic3', 'magic3', 5),
+      ('golf-club-swing', 'golf-club-swing', 5))
+sc = (('throw-paper', 'throw-paper', 3.5),
+      ('glower', 'glower', 5))
+pp = (('throw-paper', 'throw-paper', 5),
+      ('glower', 'glower', 5))
 tw = (('throw-paper', 'throw-paper', 3.5),
-      ('glower', 'glower', 5), ('finger-wag', 'finger-wag', 5))
-bc = (('phone', 'phone', 5), ('hold-pencil', 'hold-pencil', 5))
-nc = (('phone', 'phone', 5), ('throw-object', 'throw-object', 5))
+      ('glower', 'glower', 5))
+bc = (('phone', 'phone', 5),
+      ('hold-pencil', 'hold-pencil', 5))
+nc = (('phone', 'phone', 5),
+      ('throw-object', 'throw-object', 5))
 mb = (('throw-paper', 'throw-paper', 3.5),)
-ls = (('throw-paper', 'throw-paper', 5), ('throw-object',
-      'throw-object', 5), ('hold-pencil', 'hold-pencil', 5))
-rb = (('effort', 'effort', 6),)
-bf = (('throw-paper', 'throw-paper', 5), ('shredder',
-      'shredder', 3.5), ('watercooler', 'watercooler', 5))
+ls = (('throw-paper', 'throw-paper', 5),
+      ('throw-object', 'throw-object', 5),
+      ('hold-pencil', 'hold-pencil', 5))
+rb = ()
+msv = (('glower', 'glower', 5),)
+bf = (('throw-paper', 'throw-paper', 5),
+      ('shredder', 'shredder', 3.5),
+      ('watercooler', 'watercooler', 5))
 b = (('throw-paper', 'throw-paper', 5),)
-dt = (('rubber-stamp', 'rubber-stamp', 5), ('throw-paper',
-      'throw-paper', 5), ('finger-wag', 'fingerwag', 5))
+dt = (('rubber-stamp', 'rubber-stamp', 5),
+      ('throw-paper', 'throw-paper', 5))
 ac = (('throw-object', 'throw-object', 5),
       ('roll-o-dex', 'roll-o-dex', 5),
       ('stomp', 'stomp', 5),
       ('phone', 'phone', 5),
       ('throw-paper', 'throw-paper', 5))
-bs = (('throw-paper', 'throw-paper', 5), ('finger-wag', 'fingerwag', 5))
-sd = (('quick-jump', 'jump', 6),
+bs = (('throw-paper', 'throw-paper', 5),)
+sd = (('quick-jump', 'jump', 5),
       ('stomp', 'stomp', 5),
       ('magic3', 'magic3', 5),
       ('hold-pencil', 'hold-pencil', 5),
       ('throw-paper', 'throw-paper', 5))
 le = (('throw-object', 'throw-object', 5),
       ('glower', 'glower', 5),
-      ('effort', 'effort', 6),
       ('throw-paper', 'throw-paper', 5))
-bw = (('finger-wag', 'fingerwag', 5),
-      ('gavel', 'gavel', 8),
+bw = (('gavel', 'gavel', 8),
       ('throw-object', 'throw-object', 5),
       ('throw-paper', 'throw-paper', 5))
+lc = (('throw-paper', 'throw-paper', 5),
+      ('magic3', 'magic3', 5))
 if not ConfigVariableBool('want-new-cogs', 0).value:
     ModelDict = {'a': ('/models/char/suitA-', 4),
                  'b': ('/models/char/suitB-', 4),
@@ -413,7 +428,7 @@ class Suit(Avatar.Avatar):
             self.setHeight(3.25)
         elif dna.name == 'ds':
             self.scale = 4.5 / bSize
-            self.handColor = SuitDNA.corpPolyColor
+            self.handColor = SuitDNA.moneyPolyColor
             self.generateBody()
             self.generateHead('beancounter')
             self.setHeight(6.08)
@@ -425,7 +440,7 @@ class Suit(Avatar.Avatar):
             self.setHeight(7.45)
         elif dna.name == 'cr':
             self.scale = 6.75 / cSize
-            self.handColor = VBase4(0.85, 0.55, 0.55, 1.0)
+            self.handColor = SuitDNA.corpPolyColor
             self.generateBody()
             self.headTexture = 'corporate-raider.jpg'
             self.generateHead('flunky')
@@ -436,6 +451,14 @@ class Suit(Avatar.Avatar):
             self.generateBody()
             self.generateHead('bigcheese')
             self.setHeight(9.34)
+        elif dna.name == 'cp':
+            self.scale = 7.0 / aSize
+            self.handColor = SuitDNA.corpPolyColor
+            self.generateBody()
+            self.generateHead('yesman')
+            self.makeSkeleton()
+            self.setHeight(8.95)
+            self.setPickable(0) # Hide the fact the Cog's head isn't a Skelecog until one can be provided.
         elif dna.name == 'bf':
             self.scale = 4.0 / cSize
             self.handColor = SuitDNA.legalPolyColor
@@ -465,7 +488,7 @@ class Suit(Avatar.Avatar):
             self.setHeight(6.39)
         elif dna.name == 'bs':
             self.scale = 4.5 / aSize
-            self.handColor = SuitDNA.legalPolyColor
+            self.handColor = VBase4(0.5, 0.4, 0.75, 1.0)
             self.generateBody()
             self.generateHead('backstabber')
             self.setHeight(6.71)
@@ -488,6 +511,14 @@ class Suit(Avatar.Avatar):
             self.generateBody()
             self.generateHead('bigwig')
             self.setHeight(8.69)
+        elif dna.name == 'lc':
+            self.scale = 7.0 / bSize
+            self.handColor = SuitDNA.legalPolyColor
+            self.generateBody()
+            self.generateHead('downsizer')
+            self.makeSkeleton()
+            self.setHeight(8.69)
+            self.setPickable(0)
         elif dna.name == 'sc':
             self.scale = 3.6 / cSize
             self.handColor = SuitDNA.moneyPolyColor
@@ -537,6 +568,14 @@ class Suit(Avatar.Avatar):
             self.headTexture = 'robber-baron.jpg'
             self.generateHead('yesman')
             self.setHeight(8.95)
+        elif dna.name == 'msv':
+            self.scale = 6.5 / cSize
+            self.handColor = SuitDNA.moneyPolyColor
+            self.generateBody()
+            self.generateHead('flunky')
+            self.makeSkeleton()
+            self.setHeight(7.5)
+            self.setPickable(0)
         elif dna.name == 'cc':
             self.scale = 3.5 / cSize
             self.handColor = VBase4(0.55, 0.65, 1.0, 1.0)
@@ -565,13 +604,13 @@ class Suit(Avatar.Avatar):
             self.setHeight(6.4)
         elif dna.name == 'ms':
             self.scale = 4.75 / bSize
-            self.handColor = SuitDNA.salesPolyColor
+            self.handColor = SuitDNA.corpPolyColor
             self.generateBody()
             self.generateHead('movershaker')
             self.setHeight(6.7)
         elif dna.name == 'tf':
             self.scale = 5.25 / aSize
-            self.handColor = SuitDNA.salesPolyColor
+            self.handColor = SuitDNA.corpPolyColor
             self.generateBody()
             self.generateHead('twoface')
             self.setHeight(6.95)
@@ -584,7 +623,7 @@ class Suit(Avatar.Avatar):
             self.setHeight(7.61)
         elif dna.name == 'mh':
             self.scale = 7.0 / aSize
-            self.handColor = SuitDNA.salesPolyColor
+            self.handColor = SuitDNA.corpPolyColor
             self.generateBody()
             self.generateHead('yesman')
             self.setHeight(8.95)
@@ -666,19 +705,13 @@ class Suit(Avatar.Avatar):
         phase = 3.5
 
         def __doItTheOldWay__():
-            torsoTex = loader.loadTexture(
-                'phase_%s/maps/%s_blazer.jpg' %
-                (phase, dept))
+            torsoTex = loader.loadTexture('phase_%s/maps/%s_blazer.jpg' % (phase, dept))
             torsoTex.setMinfilter(Texture.FTLinearMipmapLinear)
             torsoTex.setMagfilter(Texture.FTLinear)
-            legTex = loader.loadTexture(
-                'phase_%s/maps/%s_leg.jpg' %
-                (phase, dept))
+            legTex = loader.loadTexture('phase_%s/maps/%s_leg.jpg' % (phase, dept))
             legTex.setMinfilter(Texture.FTLinearMipmapLinear)
             legTex.setMagfilter(Texture.FTLinear)
-            armTex = loader.loadTexture(
-                'phase_%s/maps/%s_sleeve.jpg' %
-                (phase, dept))
+            armTex = loader.loadTexture('phase_%s/maps/%s_sleeve.jpg' % (phase, dept))
             armTex.setMinfilter(Texture.FTLinearMipmapLinear)
             armTex.setMagfilter(Texture.FTLinear)
             modelRoot.find('**/torso').setTexture(torsoTex, 1)
@@ -691,19 +724,17 @@ class Suit(Avatar.Avatar):
             self.nametagJoint = self.find('**/joint_nameTag')
 
         if ConfigVariableBool('want-new-cogs', 0).value:
-            if dept == 'c':
-                texType = 'bossbot'
-            elif dept == 'm':
-                texType = 'cashbot'
-            elif dept == 'l':
-                texType = 'lawbot'
-            elif dept == 's':
-                texType = 'sellbot'
+            texType = {
+                'c': 'bossbot',
+                'm': 'cashbot',
+                'l': 'lawbot',
+                's': 'sellbot'
+            }
             if self.find('**/body').isEmpty():
                 __doItTheOldWay__()
             else:
-                filepath = 'phase_3.5/maps/tt_t_ene_' + texType + '.jpg'
-                if cogExists('/maps/tt_t_ene_' + texType + '.jpg'):
+                filepath = 'phase_3.5/maps/tt_t_ene_' + texType[dept] + '.jpg'
+                if cogExists('/maps/tt_t_ene_' + texType[dept] + '.jpg'):
                     bodyTex = loader.loadTexture(filepath)
                     self.find('**/body').setTexture(bodyTex, 1)
                 self.leftHand = self.find('**/def_joint_left_hold')
@@ -919,7 +950,13 @@ class Suit(Avatar.Avatar):
             if self.find('**/body'):
                 return self
         if self.loseActor is None:
-            if not self.isSkeleton:
+            if self.isSkeleton:
+                loseModel = 'phase_5/models/char/cog' + self.style.body.upper() + '_robot-lose-mod'
+                filePrefix, phase = TutorialModelDict[self.style.body]
+                loseAnim = 'phase_' + str(phase) + filePrefix + 'lose'
+                self.loseActor = Actor.Actor(loseModel, {'lose': loseAnim})
+                self.generateCorporateTie(self.loseActor)
+            else:
                 filePrefix, phase = TutorialModelDict[self.style.body]
                 loseModel = 'phase_' + str(phase) + filePrefix + 'lose-mod'
                 loseAnim = 'phase_' + str(phase) + filePrefix + 'lose'
@@ -932,13 +969,6 @@ class Suit(Avatar.Avatar):
                     self.makeWaiter(self.loseActor)
                 else:
                     self.setSuitClothes(self.loseActor)
-            else:
-                loseModel = 'phase_5/models/char/cog' + \
-                    self.style.body.upper() + '_robot-lose-mod'
-                filePrefix, phase = TutorialModelDict[self.style.body]
-                loseAnim = 'phase_' + str(phase) + filePrefix + 'lose'
-                self.loseActor = Actor.Actor(loseModel, {'lose': loseAnim})
-                self.generateCorporateTie(self.loseActor)
         self.loseActor.setScale(self.scale)
         self.loseActor.setPos(self.getPos())
         self.loseActor.setHpr(self.getHpr())
@@ -968,7 +998,7 @@ class Suit(Avatar.Avatar):
         self.removePart('modelRoot')
         self.loadModel(model)
         self.loadAnims(anims)
-        self.getGeomNode().setScale(self.scale * 1.0173)
+        # self.getGeomNode().setScale(self.scale * 1.0173)
         self.generateHealthBar()
         self.generateCorporateMedallion()
         self.generateCorporateTie()

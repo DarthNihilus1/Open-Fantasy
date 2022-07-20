@@ -45,7 +45,7 @@ class CogdoMazePlayer(FSM, CogdoMazeSplattable):
 
     def enterOff(self):
         self.toon.setAnimState('Happy', 1.0)
-        self.toon.setSpeed(0, 0)
+        self.toon.setSpeed(0, 0, 0)
 
     def exitOff(self):
         pass
@@ -160,7 +160,7 @@ class CogdoMazePlayer(FSM, CogdoMazeSplattable):
 
         def matchRunningAnim(toon=self.toon):
             toon.playingAnim = None
-            toon.setSpeed(toon.forwardSpeed, toon.rotateSpeed)
+            toon.setSpeed(toon.forwardSpeed, toon.slideSpeed, toon.rotateSpeed)
             return
 
         newTossTrack = Sequence(tossTrack, Func(matchRunningAnim))

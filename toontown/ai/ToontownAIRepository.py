@@ -49,6 +49,7 @@ from toontown.suit.SuitInvasionManagerAI import SuitInvasionManagerAI
 from toontown.toon import NPCToons
 from toontown.toonbase import ToontownGlobals
 from toontown.uberdog.DistributedInGameNewsMgrAI import DistributedInGameNewsMgrAI
+from toontown.estate.EstateManagerAI import EstateManagerAI
 import os
 
 
@@ -140,6 +141,10 @@ class ToontownAIRepository(ToontownInternalRepository):
         # Generate our news manager...
         self.newsManager = NewsManagerAI(self)
         self.newsManager.generateWithRequired(OTP_ZONE_ID_MANAGEMENT)
+
+        # Generate our estate manager...
+        self.estateMgr = EstateManagerAI(self)
+        self.estateMgr.generateWithRequired(OTP_ZONE_ID_MANAGEMENT)
 
         # Create our holiday manager...
         self.holidayManager = HolidayManagerAI(self)

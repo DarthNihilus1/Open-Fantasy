@@ -35,6 +35,7 @@ from toontown.shtiker import FishPage
 from toontown.shtiker import NPCFriendPage
 from toontown.shtiker import EventsPage
 from toontown.shtiker import TIPPage
+from toontown.toon.OptionsMenu import OptionsMenu
 from toontown.quest import Quests
 from toontown.quest import QuestParser
 from toontown.toonbase.ToontownGlobals import *
@@ -428,6 +429,7 @@ class LocalToon(DistributedToon.DistributedToon, LocalAvatar.LocalAvatar):
         self.laffMeter = LaffMeter.LaffMeter(self.style, self.hp, self.maxHp)
         self.laffMeter.setAvatar(self)
         self.laffMeter.setScale(0.075)
+        self.options = OptionsMenu()
         if self.style.getAnimal() == 'monkey':
             self.laffMeter.setPos(-1.18, 0.0, -0.87)
         else:
